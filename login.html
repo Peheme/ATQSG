@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATQSG - Connexion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <h2>📊 ATQSG - Connexion</h2>
+            <div id="errorMsg" class="error-msg hidden">Identifiants incorrects</div>
+            <input type="text" id="loginUser" placeholder="Login" autocomplete="username">
+            <input type="password" id="loginPass" placeholder="Mot de passe" autocomplete="current-password">
+            <button onclick="login()">Se connecter</button>
+        </div>
+    </div>
+    <script src="credentials.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord ATQSG</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="mainContent">
+        <div class="container">
+            <div class="header">
+                <button onclick="toggleTheme()"
+                    style="float: right; background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer;">🎨
+                    Thème</button>
+                <h1>📊 Tableau de Bord ATQSG</h1>
+                <p>Plan Pluriannuel 2025-2028 | Objectif 200 adhérents</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('dashboard')">📊 Dashboard</button>
+                <button class="tab" onclick="showTab('adherents')">👥 Adhérents</button>
+                <button class="tab" onclick="showTab('budget')">💰 Budget</button>
+                <button class="tab" onclick="showTab('projets')">🚀 Projets</button>
+                <button class="tab" onclick="showTab('todo')">✅ To Do</button>
+            </div>
+
+            <div class="content">
+                <!-- DASHBOARD -->
+                <div id="dashboard" class="tab-content active">
+                    <div class="kpi-grid">
+                        <div class="kpi-card gold">
+                            <div class="kpi-label">Adhérents Saison 2025/2026</div>
+                            <div class="kpi-value">143</div>
+                            <div class="kpi-progress">-1 vs saison précédente (144)</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 71.5%"></div>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 11px;">Objectif 2028 : 200 adhérents</div>
+                        </div>
+                        <div class="kpi-card blue">
+                            <div class="kpi-label">École de Tennis</div>
+                            <div class="kpi-value">97</div>
+                            <div class="kpi-progress">68% des adhérents (+2 vs 2024)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADHÉRENTS -->
+                <div id="adherents" class="tab-content">
+                    <div class="section-title">📊 Données adhérents par saison</div>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>2026</th>
+                            <th>2025</th>
+                            <th>2024</th>
+                            <th>2023</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Saint Germain</strong></td>
+                            <td>24</td>
+                            <td>26</td>
+                            <td>37</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quincieux</strong></td>
+                            <td>86</td>
+                            <td>86</td>
+                            <td>87</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Autres</strong></td>
+                            <td>33</td>
+                            <td>32</td>
+                            <td>39</td>
+                            <td>47</td>
+                        </tr>
+                        <tr style="background: #f8f9fa; font-weight: bold;">
+                            <td><strong>Total</strong></td>
+                            <td>143</td>
+                            <td>144</td>
+                            <td>163</td>
+                            <td>194</td>
+                        </tr>
+                        <tr style="height: 20px;">
+                            <td colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Adultes simples</strong></td>
+                            <td>45</td>
+                            <td>41</td>
+                            <td>51</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Enfants simples</strong></td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Adultes cours</strong></td>
+                            <td>29</td>
+                            <td>25</td>
+                            <td>32</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mini tennis</strong></td>
+                            <td>7</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Enfant débutant</strong></td>
+                            <td>17</td>
+                            <td>14</td>
+                            <td>16</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Enfant perfectionnement</strong></td>
+                            <td>44</td>
+                            <td>51</td>
+                            <td>51</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Formule découverte</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- BUDGET -->
+                <div id="budget" class="tab-content">
+                    <div class="section-title">💰 Indicateurs budgétaires 2025/2026</div>
+                    <div class="kpi-grid">
+                        <div class="kpi-card blue">
+                            <div class="kpi-label">Adhésions</div>
+                            <div class="kpi-value">37 260€</div>
+                            <div class="kpi-progress">Objectif : 38 050€</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 97.9%"></div>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 11px;">97.9% de l'objectif atteint</div>
+                        </div>
+                        <div class="kpi-card gold">
+                            <div class="kpi-label">Locations horaire</div>
+                            <div class="kpi-value">823.20€</div>
+                            <div class="kpi-progress">Objectif : 1 560€</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 52.8%"></div>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 11px;">52.8% de l'objectif atteint</div>
+                        </div>
+                        <div class="kpi-card green">
+                            <div class="kpi-label">Stages</div>
+                            <div class="kpi-value">320€</div>
+                            <div class="kpi-progress">Objectif : 3 110€</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 10.3%"></div>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 11px;">10.3% de l'objectif atteint</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETS -->
+                <div id="projets" class="tab-content">
+                    <div class="section-title">🗓️ Projets 2026</div>
+                    <table>
+                        <tr>
+                            <th>Projet</th>
+                            <th>Échéance</th>
+                            <th>Budget</th>
+                            <th>Statut</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Éclairage LED courts 3 & 4</strong></td>
+                            <td>Sept 2026</td>
+                            <td>15-20K€</td>
+                            <td>À lancer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Communication renforcée</strong></td>
+                            <td>Jan 2026</td>
+                            <td>-</td>
+                            <td>À lancer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arbre de Noël</strong></td>
+                            <td>13 Déc 2025</td>
+                            <td>300€</td>
+                            <td>Planifié</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Laser Game ados</strong></td>
+                            <td>23 Mai 2026</td>
+                            <td>100€</td>
+                            <td>À planifier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Journée Portes Ouvertes</strong></td>
+                            <td>13 Juin 2026</td>
+                            <td>800€</td>
+                            <td>À planifier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rafraîchissement locaux</strong></td>
+                            <td>Été 2026</td>
+                            <td>2K€</td>
+                            <td>Bloqué</td>
+                        </tr>
+                    </table>
+                    <div class="section-title">🗓️ Projets 2027</div>
+                    <table>
+                        <tr>
+                            <th>Projet</th>
+                            <th>Échéance</th>
+                            <th>Budget</th>
+                            <th>Statut</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Serrures connectées</strong></td>
+                            <td>Sept 2027</td>
+                            <td>10K€</td>
+                            <td>Planifié</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Labellisation IdClub FFT</strong></td>
+                            <td>Juin 2027</td>
+                            <td>1K€</td>
+                            <td>Planifié</td>
+                        </tr>
+                    </table>
+                    <div class="section-title">🗓️ Projets 2028</div>
+                    <table>
+                        <tr>
+                            <th>Projet</th>
+                            <th>Échéance</th>
+                            <th>Budget</th>
+                            <th>Statut</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Moquette courts 3 & 4</strong></td>
+                            <td>Été 2028</td>
+                            <td>70K€</td>
+                            <td>Planifié</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Étude Padel</strong></td>
+                            <td>Déc 2028</td>
+                            <td>2K€</td>
+                            <td>Planifié</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- TO DO -->
+                <div id="todo" class="tab-content">
+                    <div class="section-title">🚨 Novembre 2025</div>
+                    <table>
+                        <tr>
+                            <th style="width:50px">✓</th>
+                            <th style="width:150px">Responsable</th>
+                            <th>Action</th>
+                            <th style="width:120px">Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-1')"></td>
+                            <td>Bureau</td>
+                            <td><span class="action-link" onclick="openModal('eclairage-etude')">Lancer étude
+                                    faisabilité éclairage LED</span></td>
+                            <td>15/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-2')"></td>
+                            <td>Président</td>
+                            <td><span class="action-link" onclick="openModal('plafond')">Relance mairie Quincieux -
+                                    plafond club house</span></td>
+                            <td>08/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-3')"></td>
+                            <td>Président</td>
+                            <td><span class="action-link" onclick="openModal('fuite')">Relance mairie Quincieux - fuite
+                                    toit</span></td>
+                            <td>08/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-4')"></td>
+                            <td>Président</td>
+                            <td><span class="action-link" onclick="openModal('sanitaires')">Relance mairie St-Germain -
+                                    sanitaires</span></td>
+                            <td>08/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-5')"></td>
+                            <td>Président</td>
+                            <td><span class="action-link" onclick="openModal('serrure')">Relance mairie St-Germain -
+                                    serrure court couvert</span></td>
+                            <td>08/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-6')"></td>
+                            <td>Président + Trésorier</td>
+                            <td><span class="action-link" onclick="openModal('sponsors')">Préparer dossier
+                                    sponsors</span></td>
+                            <td>30/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-7')"></td>
+                            <td>Bureau</td>
+                            <td><span class="action-link" onclick="openModal('equipe')">Constitution équipe projet
+                                    2026-2028</span></td>
+                            <td>30/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'nov-8')"></td>
+                            <td>Commission sportive</td>
+                            <td><span class="action-link" onclick="openModal('tournoi')">Organiser tournoi
+                                    multi-chances</span></td>
+                            <td>30/11/2025</td>
+                        </tr>
+                    </table>
+
+                    <div class="section-title">📅 Décembre 2025</div>
+                    <table>
+                        <tr>
+                            <th style="width:50px">✓</th>
+                            <th style="width:150px">Responsable</th>
+                            <th>Action</th>
+                            <th style="width:120px">Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'dec-1')"></td>
+                            <td>Commission animation</td>
+                            <td>Organisation Arbre de Noël</td>
+                            <td>13/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'dec-2')"></td>
+                            <td>Président</td>
+                            <td>Planifier 1ère réunion équipe projet</td>
+                            <td>15/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'dec-3')"></td>
+                            <td>Trésorier</td>
+                            <td>Obtenir 3 devis éclairage LED</td>
+                            <td>20/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'dec-4')"></td>
+                            <td>Trésorier</td>
+                            <td>Bilan financier 2025 provisoire</td>
+                            <td>31/12/2025</td>
+                        </tr>
+                    </table>
+
+                    <div class="section-title">📅 Janvier 2026</div>
+                    <table>
+                        <tr>
+                            <th style="width:50px">✓</th>
+                            <th style="width:150px">Responsable</th>
+                            <th>Action</th>
+                            <th style="width:120px">Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'jan-1')"></td>
+                            <td>Trésorier + Président</td>
+                            <td>Finaliser plan financement éclairage</td>
+                            <td>15/01/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'jan-2')"></td>
+                            <td>Bureau</td>
+                            <td>Déploiement nouveau système tarifaire</td>
+                            <td>15/01/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'jan-3')"></td>
+                            <td>Secrétaire</td>
+                            <td>Mise en place newsletter mensuelle</td>
+                            <td>31/01/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'jan-4')"></td>
+                            <td>Équipe projet</td>
+                            <td>Lancer campagne sponsors</td>
+                            <td>31/01/2026</td>
+                        </tr>
+                    </table>
+
+                    <div class="section-title">📅 Février - Mars 2026</div>
+                    <table>
+                        <tr>
+                            <th style="width:50px">✓</th>
+                            <th style="width:150px">Responsable</th>
+                            <th>Action</th>
+                            <th style="width:120px">Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'fev-1')"></td>
+                            <td>Président</td>
+                            <td>Validation mairies - projet éclairage</td>
+                            <td>28/02/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'fev-2')"></td>
+                            <td>Équipe projet</td>
+                            <td>Relance prospects sponsors</td>
+                            <td>28/02/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'mar-1')"></td>
+                            <td>Bureau + Mairie</td>
+                            <td>Définir règles gestion éclairage</td>
+                            <td>31/03/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'mar-2')"></td>
+                            <td>Président + Trésorier</td>
+                            <td>Signature contrats sponsors</td>
+                            <td>31/03/2026</td>
+                        </tr>
+                    </table>
+
+                    <div class="section-title">📅 Avril - Juin 2026</div>
+                    <table>
+                        <tr>
+                            <th style="width:50px">✓</th>
+                            <th style="width:150px">Responsable</th>
+                            <th>Action</th>
+                            <th style="width:120px">Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'avr-1')"></td>
+                            <td>N/A</td>
+                            <td>Stage Pâques - planification</td>
+                            <td>06/04/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'avr-2')"></td>
+                            <td>Entreprise</td>
+                            <td>Planification travaux éclairage</td>
+                            <td>30/04/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'avr-3')"></td>
+                            <td>Commission communication</td>
+                            <td>Mise en place visibilité sponsors</td>
+                            <td>30/04/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'mai-1')"></td>
+                            <td>Commission animation</td>
+                            <td>Organisation sortie Laser Game</td>
+                            <td>23/05/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'jui-1')"></td>
+                            <td>N/A</td>
+                            <td>Préparation Journée Portes Ouvertes</td>
+                            <td>13/06/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'jui-2')"></td>
+                            <td>N/A</td>
+                            <td>Stages été - organisation</td>
+                            <td>29/06/2026</td>
+                        </tr>
+                    </table>
+
+                    <div class="section-title">📅 Juillet - Septembre 2026</div>
+                    <table>
+                        <tr>
+                            <th style="width:50px">✓</th>
+                            <th style="width:150px">Responsable</th>
+                            <th>Action</th>
+                            <th style="width:120px">Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'aou-1')"></td>
+                            <td>Commission communication</td>
+                            <td>Rafraîchissement locaux</td>
+                            <td>31/08/2026</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" onchange="saveTodo(this, 'sep-1')"></td>
+                            <td>Entreprise</td>
+                            <td>Réalisation éclairage LED</td>
+                            <td>30/09/2026</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="actionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer"><button class="btn" onclick="closeModal()">Fermer</button></div>
+        </div>
+    </div>
+
+    <script src="credentials.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
