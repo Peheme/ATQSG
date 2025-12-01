@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de Bord ATQSG</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <script>
+        if (sessionStorage.getItem('atqsg_logged') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
     <div id="mainContent">
         <div class="container">
             <div class="header" style="position: relative;">
@@ -36,7 +42,7 @@
                             <div class="kpi-value">147</div>
                             <div class="kpi-progress">+3 vs saison précédente (144)</div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 73,5%"></div>
+                                <div class="progress-fill" style="width: 73.5%"></div>
                             </div>
                             <div style="margin-top: 10px; font-size: 11px;">Objectif 2028 : 200 adhérents</div>
                         </div>
@@ -536,7 +542,6 @@
         </div>
     </div>
 
-    <script src="credentials.js"></script>
     <script src="script.js"></script>
 </body>
 
