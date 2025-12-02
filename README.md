@@ -21,25 +21,3 @@ L'application propose plusieurs onglets pour une gestion complète :
 *   **HTML5** : Structure sémantique de l'application.
 *   **CSS3** : Mise en page et styles (Grid, Flexbox), avec gestion de thèmes (`style.css`, `style2.css`).
 *   **JavaScript (Vanilla)** : Logique de l'application, gestion du DOM, et persistance des données via `localStorage` et `sessionStorage`.
-
-## 📂 Structure du Projet
-
-*   `Index.html` : Page principale contenant le tableau de bord et tous les onglets.
-*   `login.html` : Page de connexion.
-*   `script.js` : Contient la logique principale (gestion des onglets, modales, tâches, thème).
-*   `login.js` : Gestion de l'authentification.
-*   `credentials.js` : Fichier de configuration des identifiants (non inclus ou à configurer).
-*   `style.css` : Feuille de style principale (Thème par défaut).
-*   `style2.css` : Feuille de style alternative (Thème secondaire).
-
-## 📦 Installation et Utilisation
-
-1.  Clonez ce dépôt sur votre machine locale.
-2.  Assurez-vous d'avoir le fichier `credentials.js` avec les bons identifiants (ou créez-en un avec un objet `CREDENTIALS`).
-3.  Ouvrez le fichier `Index.html` dans votre navigateur web moderne préféré.
-4.  Connectez-vous pour accéder au tableau de bord.
-
-## 💾 Persistance des Données
-
-*   L'état de connexion est conservé pour la session (`sessionStorage`).
-*   Le choix du thème et l'état des tâches (To Do) sont sauvegardés dans le navigateur (`localStorage`), permettant de retrouver sa configuration lors de la prochaine visite.
